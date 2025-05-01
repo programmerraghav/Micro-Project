@@ -1,0 +1,32 @@
+.container .change #Setbutton button {
+    width: max-content;
+    border-radius: 30px;
+    background-color: #1deebe;
+    color: blue;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid gray;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 600;
+}
+
+.container .change #Setbutton button:hover {
+    animation: but 0.25s ease 0s 1 alternate forwards;
+}
+
+.container .change #Setbutton button:active {
+    animation: onclick 0.1s ease 0.05s 1 alternate backwards;
+}
+
+@keyframes onclick{
+    from{}
+    to{
+        background-color: #1deebe;
+    }
+}
+@keyframes but {
+    from {}
+    to { 
+        background-color: #54d8b9;
+    }
+}

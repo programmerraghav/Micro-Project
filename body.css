@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.change,
+.display {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    width: 368px;
+    height: 20vh;
+    background-color: rgb(207, 239, 224);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display{
+    align-items: normal;
+}
+
+.change:hover,
+.display:hover {
+    transform: scale(1.03);
+}
+@media only screen and (orientation: portrait) {
+    .container{
+        flex-direction: column;
+    }
+}

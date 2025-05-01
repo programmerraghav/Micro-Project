@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="Switch.css">
+    <link rel="stylesheet" href="Set Button.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <img src="IMAGES/clouds-and-sun.png" alt="cup Coaster Logo">
+            <h3>Smart Cup Coaster</h3>
+            <div class="date-time">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class="change">
+            <div id="Limit" style="padding:5px; margin: 5px;">
+                Current Limited Temperature: 55&deg;C
+            </div>
+            <div class="range">
+                <div class="sliderValue">
+                    <span></span>
+                </div>
+                <div class="field">
+                    <div class="value left">45</div>
+                    <input type="range" min="45" max="65" value="55" step="1" id="Slider">
+                    <div class="value right">65</div>
+                </div>
+            </div>
+            <div id="Setbutton">
+                <button>Set The Temperature</button>
+            </div>
+        </div>
+        <div class="display">
+            <div id="CurrrentTemperature">
+                Current Temperature:
+            </div>
+            <div class="temperature" style="font-size: 90px; text-align: center;">
+                NaN
+            </div>
+            <div class="buttonclass">
+                <div class="buttonleft">HOT</div>
+                <input type="checkbox" id="check">
+                <label for="check" class="button"></label>
+                <div class="buttonright">COLD</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="details" style="text-align: center;">
+            This product is designed to ease the workflow.
+        </div>
+        <div class="c25">
+            <a href="https://github.com/programmerraghav" class="iconcontainer">
+                <div id="tooltip">Raghav (Github)</div>
+                <img src="Icon=GitHub, Style=Black.png" style="width: 25px; height: 25px;" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/raghav----goyal/" class="iconcontainer">
+                <div id="tooltip">Raghav (LinkedIn)</div>
+                <img src="Icon=LinkedIn, Style=Black.png" style="width: 25px; margin: 0; padding: 0; height: 25px;"
+                    alt="LinkedIn">
+            </a>
+            <a href="https://github.com/programmerraghav" class="iconcontainer">
+                <div id="tooltip">Omnie (Github)</div>
+                <img src="Icon=GitHub, Style=Black.png" style="width: 25px;" alt="GIthub">
+            </a>
+            <a href="https://github.com/programmerraghav" class="iconcontainer">
+                <div id="tooltip">Omnie (LinkedIn)</div>
+                <img src="Icon=LinkedIn, Style=Black.png" style="width: 25px; margin: 0; padding: 0; height: 25px;"
+                    alt="LinkedIn">
+            </a>
+        </div>
+        <div id="Acknowledgement">
+            <span>© 2025 Smart Cup Coaster Dashboard</span>
+            <span>Designed by Raghav Goyal & Omnie Singh</span>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="header.js"></script>
+</body>
+
+</html>

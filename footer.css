@@ -1,0 +1,65 @@
+footer {
+    height: fit-content;
+    width: 100vw;
+    background-color: #b9c7f8;
+    color: #3f3f3f;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.iconcontainer:hover {
+    transform: scale(1.2);
+}
+
+a {
+    width: 35px;
+    background-color: white;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: blue;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    top: -28px;
+    white-space: nowrap;
+}
+
+.iconcontainer {
+    border-radius: 50px;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    width: 25px;
+}
+
+.iconcontainer:hover #tooltip {
+    opacity: 1;
+    transform: translateY(-10px);
+    transform: scale(1.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.c25 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#Acknowledgement {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 2px; 
+}

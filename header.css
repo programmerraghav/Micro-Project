@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Winky Sans', sans-serif;
+    background-color: beige;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+.header{
+    width: 98.5vw;
+}
+header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px; 
+    background: linear-gradient(to right, aqua, #28ff3a, aqua);
+    border-radius: 10px;
+    position: relative;
+    left: 1.5px;
+}
+p {text-align: right;}
+header .date-time {
+    display: flex;
+    flex-direction: column;
+}
