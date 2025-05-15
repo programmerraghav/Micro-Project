@@ -62,9 +62,10 @@ setInterval(() => {
         currentTemperature = snapshot.val();
     })
     if (ishot) {
+        document.querySelector(".notificationbox").style.display="normal"
         if (currentTemperature < inputslider) {
             document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-            <div class="header">
+            <div class="header2">
                 <div class="title">
                     Heating
                 </div>
@@ -74,9 +75,10 @@ setInterval(() => {
                 Warming up your cup - stay cozy!
             </div>
         </div>`;
+        document.querySelector(".status").innerHTML = "Warming";
         } else {
             document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-        <div class="header">
+        <div class="header2">
                 <div class="title">
                 Heating
                 </div>
@@ -86,12 +88,13 @@ setInterval(() => {
                 Your cup is hot enough - enjoy!
                 </div>
                 </div>`;
+                document.querySelector(".status").innerHTML = "Warmed";
         }
         document.querySelector(".status").style.color = "rgba(255, 0, 0, 0.76)";
     } else {
         if (currentTemperature > inputslider) {
             document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-                <div class="header">
+                <div class="header2">
                 <div class="title">
                 Cooling
                 </div>
@@ -102,10 +105,10 @@ setInterval(() => {
                 </div>
                 </div>`;
 
-            document.querySelector(".status").textContent = "Cooling";
+            document.querySelector(".status").innerHTML = "Cozing";
         } else {
             document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-            <div class="header">
+            <div class="header2">
             <div class="title">
             Cooling
             </div>
@@ -116,7 +119,7 @@ setInterval(() => {
                 </div>
                 </div>`;
 
-            document.querySelector(".status").textContent = "Cooled";
+            document.querySelector(".status").innerHTML = "Cozed";
         }
         document.querySelector(".status").style.color = "rgba(0, 0, 255, 0.76)";
     }

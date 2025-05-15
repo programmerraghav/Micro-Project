@@ -1,4 +1,4 @@
-.header {
+.header2 {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid grey;
@@ -13,11 +13,9 @@
     bottom: 120px;
     right: 10px;
     z-index: 10;
+    display:none;
 }
 
-.notification {
-    transform-origin: bottom;
-}
 
 .title {
     font-size: medium;
