@@ -61,7 +61,7 @@ setInterval(() => {
         document.querySelector(".temperature").innerHTML = `${snapshot.val()}&deg;C`;
         currentTemperature = snapshot.val();
     })
-    if (ishot) {
+    if (isHot) {
         document.querySelector(".notificationbox").style.display="normal"
         if (currentTemperature < inputslider) {
             document.querySelector(".notificationbox").innerHTML = `<div class="notification">
