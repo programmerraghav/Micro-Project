@@ -33,3 +33,30 @@
         flex-direction: column;
     }
 }
+
+.title1 {
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+.status {
+    font-size: 90px;
+    text-align: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    background-color: rgb(207, 239, 224);
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.5);
+}
+
+.status {
+    color: rgba(255, 0, 0, 0.76);
+}

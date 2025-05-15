@@ -17,6 +17,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 let inputslider = parseInt(document.getElementById("Slider").value);
 let isHot = true;
+let currentTemperature;
 
 document.getElementById("Setbutton").addEventListener('click', function () {
     inputslider = parseInt(document.getElementById("Slider").value);
@@ -55,7 +56,63 @@ function writeTemperature() {
 };
 
 const userref = ref(db, 'user2/currentTemperature')
-setInterval(()=>{
-onValue(userref, (snapshot) => {
-    document.querySelector(".temperature").innerHTML = `${snapshot.val()}&deg;C`;
-})},1000)
+setInterval(() => {
+    onValue(userref, (snapshot) => {
+        document.querySelector(".temperature").innerHTML = `${snapshot.val()}&deg;C`;
+        currentTemperature = snapshot.val();
+    })
+}, 1000)
+
+if (ishot) {
+    if (currentTemperature < inputslider) {
+        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+            <div class="header">
+                <div class="title">
+                    Heating
+                </div>
+                <button id="close">&#10006;</button>
+            </div>
+            <div class="body">
+                Warming up your cup - stay cozy!
+            </div>
+        </div>`;
+    } else {
+        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+            <div class="header">
+                <div class="title">
+                    Heating
+                </div>
+                <button id="close">&#10006;</button>
+            </div>
+            <div class="body">
+                Your cup is hot enough - enjoy!
+            </div>
+        </div>`;
+    }
+} else {
+    if (currentTemperature > inputslider) {
+        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+            <div class="header">
+                <div class="title">
+                    Cooling
+                </div>
+                <button id="close">&#10006;</button>
+            </div>
+            <div class="body">
+                Cooling down your cup - stay cool!
+            </div>
+        </div>`;
+    } else {
+        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+            <div class="header">
+                <div class="title">
+                    Cooling
+                </div>
+                <button id="close">&#10006;</button>
+            </div>
+            <div class="body">
+                Your cup is cool enough - enjoy!
+            </div>
+        </div>`;
+    }
+}
