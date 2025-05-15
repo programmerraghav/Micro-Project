@@ -21,14 +21,12 @@ let currentTemperature;
 
 document.getElementById("Setbutton").addEventListener('click', function () {
     inputslider = parseInt(document.getElementById("Slider").value);
-    document.getElementById("Limit").innerHTML = `Current Limited Temperature: ${inputslider}&deg;C`
-    console.log(inputslider);
+    document.getElementById("Limit").innerHTML = `Current Limited Temperature: ${inputslider}&deg;C`;
     writeTemperature();
 })
 
 document.getElementById("check").addEventListener("click", function () {
     isHot = !isHot;
-    console.log(isHot);
     if (!isHot) {
         document.querySelector("#Slider").min = 5;
         document.querySelector("#Slider").max = 25;
