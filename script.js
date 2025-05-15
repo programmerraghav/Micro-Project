@@ -78,41 +78,51 @@ if (ishot) {
         </div>`;
     } else {
         document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-            <div class="header">
+        <div class="header">
                 <div class="title">
-                    Heating
+                Heating
                 </div>
                 <button id="close">&#10006;</button>
-            </div>
-            <div class="body">
+                </div>
+                <div class="body">
                 Your cup is hot enough - enjoy!
-            </div>
-        </div>`;
+                </div>
+                </div>`;
     }
+    document.querySelector(".status").style.color = "rgba(255, 0, 0, 0.76)";
 } else {
     if (currentTemperature > inputslider) {
         document.querySelector(".notificationbox").innerHTML = `<div class="notification">
-            <div class="header">
+                <div class="header">
                 <div class="title">
-                    Cooling
+                Cooling
                 </div>
                 <button id="close">&#10006;</button>
-            </div>
-            <div class="body">
-                Cooling down your cup - stay cool!
-            </div>
-        </div>`;
+                </div>
+                <div class="body">
+                Almost there! Your beverage is getting ready.
+                </div>
+                </div>`;
+                
+        document.querySelector(".status").textContent = "Cooling";
     } else {
         document.querySelector(".notificationbox").innerHTML = `<div class="notification">
             <div class="header">
-                <div class="title">
-                    Cooling
-                </div>
+            <div class="title">
+            Cooling
+            </div>
                 <button id="close">&#10006;</button>
-            </div>
-            <div class="body">
+                </div>
+                <div class="body">
                 Your cup is cool enough - enjoy!
-            </div>
-        </div>`;
+                </div>
+                </div>`;
+
+        document.querySelector(".status").textContent = "Cooled";
     }
+    document.querySelector(".status").style.color = "rgba(0, 0, 255, 0.76)";
 }
+
+document.querySelector("#close").addEventListener("click", function () {
+    document.querySelector(".notificationbox").innerHTML = "";
+})
