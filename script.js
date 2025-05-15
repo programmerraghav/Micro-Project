@@ -61,11 +61,9 @@ setInterval(() => {
         document.querySelector(".temperature").innerHTML = `${snapshot.val()}&deg;C`;
         currentTemperature = snapshot.val();
     })
-}, 1000)
-
-if (ishot) {
-    if (currentTemperature < inputslider) {
-        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+    if (ishot) {
+        if (currentTemperature < inputslider) {
+            document.querySelector(".notificationbox").innerHTML = `<div class="notification">
             <div class="header">
                 <div class="title">
                     Heating
@@ -76,8 +74,8 @@ if (ishot) {
                 Warming up your cup - stay cozy!
             </div>
         </div>`;
-    } else {
-        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+        } else {
+            document.querySelector(".notificationbox").innerHTML = `<div class="notification">
         <div class="header">
                 <div class="title">
                 Heating
@@ -88,11 +86,11 @@ if (ishot) {
                 Your cup is hot enough - enjoy!
                 </div>
                 </div>`;
-    }
-    document.querySelector(".status").style.color = "rgba(255, 0, 0, 0.76)";
-} else {
-    if (currentTemperature > inputslider) {
-        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+        }
+        document.querySelector(".status").style.color = "rgba(255, 0, 0, 0.76)";
+    } else {
+        if (currentTemperature > inputslider) {
+            document.querySelector(".notificationbox").innerHTML = `<div class="notification">
                 <div class="header">
                 <div class="title">
                 Cooling
@@ -103,10 +101,10 @@ if (ishot) {
                 Almost there! Your beverage is getting ready.
                 </div>
                 </div>`;
-                
-        document.querySelector(".status").textContent = "Cooling";
-    } else {
-        document.querySelector(".notificationbox").innerHTML = `<div class="notification">
+
+            document.querySelector(".status").textContent = "Cooling";
+        } else {
+            document.querySelector(".notificationbox").innerHTML = `<div class="notification">
             <div class="header">
             <div class="title">
             Cooling
@@ -118,11 +116,12 @@ if (ishot) {
                 </div>
                 </div>`;
 
-        document.querySelector(".status").textContent = "Cooled";
+            document.querySelector(".status").textContent = "Cooled";
+        }
+        document.querySelector(".status").style.color = "rgba(0, 0, 255, 0.76)";
     }
-    document.querySelector(".status").style.color = "rgba(0, 0, 255, 0.76)";
-}
 
-document.querySelector("#close").addEventListener("click", function () {
-    document.querySelector(".notificationbox").innerHTML = "";
-})
+    document.querySelector("#close").addEventListener("click", function () {
+        document.querySelector(".notificationbox").innerHTML = "";
+    })
+}, 1000)
