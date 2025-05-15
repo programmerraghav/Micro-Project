@@ -11,8 +11,8 @@ body {
 }
 
 .header {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: 5px;
+    width: 98.5vw;
 }
 
 header {
@@ -28,6 +28,7 @@ header {
     position: relative;
     left: 1.5px;
 }
+
 
 p {
     text-align: right;
